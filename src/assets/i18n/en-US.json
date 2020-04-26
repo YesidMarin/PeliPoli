@@ -1,0 +1,40 @@
+{
+    "header": {
+      "home": "Home",
+      "favorites": "Favorites",
+      "search": "Search"
+    },
+    "movie": {
+      "title": "Title",
+      "release": "Release Date",
+      "overview" : "Overview",
+      "averageVote": "Average Vote",
+      "genres": "Genres",
+      "budget": "Budget",
+      "addFavorite": "Add to favorites",
+      "removeFavorite": "Remove from favorites",
+      "info": "Information"
+    },
+    "home": {
+      "title": "Welcome to PeliPoli",
+      "description": "Grancolombian Polytechnic Project. Search for movies, find out which movies are the most popular, are it top rated or will arrive very soon.",
+      "subtitlePopular": "Popular Movies ❤",
+      "subtitleUpcoming": "Upcoming Movies 🔥",
+      "subtitleTop": "Top Rated Movies ⭐"
+    },
+    "favorites": {
+      "title": "Your favorites list",
+      "resultsPartOne": "You have",
+      "resultsPartTwo": "movies on your favorits list.",
+      "msgAdd": "Movie add to favorites.",
+      "msgRemove": "Movie removed from favorites."
+    },
+    "search": {
+      "title": "Result for",
+      "results": "result found",
+      "btnPlus": "Load more ..."
+    },
+    "notFound": {
+      "text": "Page not found"
+    }
+  }

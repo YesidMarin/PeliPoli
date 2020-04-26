@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item px-2" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" [routerLink]="['']">{{ 'header.home' | translate }}</a>
+      </li>
+      <li class="nav-item px-2" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['favorites']">{{ 'header.favorites' | translate }}</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a 
+          aria-expanded="false"
+          aria-haspopup="true" 
+          class="nav-link dropdown-toggle cursor-pointer" 
+          data-toggle="dropdown" 
+          id="navbarDropdown" 
+          role="button" >
+          <svg-icon [src]="'./assets/images/' + language.icon" [svgStyle]="{ 'width.px':25 }"></svg-icon>
+          {{ language.description }}
+         </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <a 
+            class="dropdown-item cursor-pointer" 
+            (click)="setLanguage(lang)"
+            *ngFor="let lang of languages">
+             <svg-icon [src]="'./assets/images/' + lang.icon" [svgStyle]="{ 'width.px':25 }"></svg-icon>
+             <span class="ml-2">{{ lang.description }}</span>
+           </a>
+         </div>
+      </li>
+    </ul>
+    <img src="./assets/images/PeliPoli.png" class="img" alt="logo" width="207" height="50">
+    <form autocomplete="off" class="form-inline my-2 my-lg-0" [formGroup]="searchForm" novalidate>
+        <input 
+          aria-label="Pesquisar"
+          class="form-control"
+          formControlName="searchText"
+          id="searchText"
+          name="searchText"
+          placeholder="{{ 'header.search' | translate }}"
+          type="search">
+        <button 
+          class="btn btn-search" 
+          (click)="search(searchForm.value)"
+          type="submit">
+          <svg-icon class="bg-svg" src="./assets/images/search.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
+        </button>
+      </form>
+  </div>
+</nav>

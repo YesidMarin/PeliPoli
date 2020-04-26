@@ -1,0 +1,23 @@
+.card{
+    border: none;
+}
+.text-welcome{
+    font-weight: bold;
+    margin-top: 25px;
+}
+.title-movie{
+    display: inline-flex;
+    align-items: center;
+}
+.title-movie > h2{
+    display: inline-flex;
+    padding-right: 10px;
+}
+.bg-svg{
+    fill: white;
+}
+
+.btn-next{
+    border-radius: 20%;
+    background-color: #F5596F;
+}

@@ -1,0 +1,23 @@
+<h1 class="text-welcome">{{ 'home.title' | translate }}</h1>
+<p>{{'home.description' | translate }}</p>
+<hr>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="title-movie">
+        <h2>{{ title | translate}}</h2> <button class="btn btn-next" (click)="changeMovie()">
+            <svg-icon class="bg-svg" src="./assets/images/right-arrow.svg" [svgStyle]="{ 'width.px':25}"></svg-icon>
+        </button>
+    </div>
+    <hr>
+    <ul class="row list-unstyled">
+      <li class="col-md-6 d-flex align-items-stretch" *ngFor="let movie of movies">
+        <div class="card mb-4">
+          <div class="card-body">
+            <app-movie [movie]="movie"></app-movie>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
